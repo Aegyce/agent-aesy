@@ -7,7 +7,7 @@
 
 ### 技能<br><sub>Skills</sub>
 
-- [computer-technical-language](skills/computer-technical-language/SKILL.md)：用于编写、润色和审查计算机技术表达，规范术语与措辞并保留原有事实、条件和不确定性。<br>
+- [computer-technical-language](plugins/computer-technical-language/skills/computer-technical-language/SKILL.md)：用于编写、润色和审查计算机技术表达，规范术语与措辞并保留原有事实、条件和不确定性。<br>
   <sub>Write, revise, and review computer technical language with precise terminology while preserving facts, conditions, and uncertainty.</sub>
 
 ### MCP 集成<br><sub>MCP integrations</sub>
@@ -25,8 +25,11 @@
 Aesy 中的部分组件可通过相应格式与接口供其他 AI 工具复用，可包括 Skill、MCP 集成、工具及其他能力。<br>
 <sub>Some components of Aesy can be reused by other AI tools through supported formats and interfaces. These may include skills, MCP integrations, tools, and other capabilities.</sub>
 
-可复用组件通过 [Aegyce Marketplace](https://github.com/Aegyce/aegyce-marketplace) 分发，也可从本仓库直接获取，通过使用方支持的接口接入。<br>
-<sub>Reusable components are distributed through [Aegyce Marketplace](https://github.com/Aegyce/aegyce-marketplace) and can also be accessed directly from this repository through the receiving tool's supported interfaces.</sub>
+可复用组件按可独立安装的能力包，通过 [Aegyce Marketplace](https://github.com/Aegyce/aegyce-marketplace) 分发，也可从本仓库直接获取。<br>
+<sub>Reusable components are distributed as independently installable capability packages through [Aegyce Marketplace](https://github.com/Aegyce/aegyce-marketplace) and are also available directly from this repository.</sub>
+
+- [aesy-computer-technical-language](plugins/computer-technical-language)：提供计算机技术用语 Skill，可单独安装。<br>
+  <sub>Provides the computer technical language skill as an independently installable plugin.</sub>
 
 ## 许可<br><sub>License</sub>
 
