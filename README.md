@@ -31,6 +31,11 @@ Aesy 中的部分组件可通过相应格式与接口供其他 AI 工具复用�
 - [Aesy:computer-technical-language](plugins/computer-technical-language)：提供计算机技术用语 Skill，可单独安装。<br>
   <sub>Provides the computer technical language skill as an independently installable plugin.</sub>
 
+## 发布维护<br><sub>Publishing</sub>
+
+能力包内容变更时提高包内版本号。主分支 push 后，发布工作流通知市场生成副本；跨仓库触发需按[发布说明](https://github.com/Aegyce/aegyce-marketplace/blob/main/docs/publishing.md)配置 Secret。<br>
+<sub>Increase the package version whenever its contents change. A push to the main branch notifies the marketplace to generate publication copies. Configure the cross-repository secret as described in the [publishing guide](https://github.com/Aegyce/aegyce-marketplace/blob/main/docs/publishing.md).</sub>
+
 ## 许可<br><sub>License</sub>
 
 原创内容采用 [CC BY-NC 4.0](LICENSE) 许可，商业用途须取得[单独书面授权](COMMERCIAL-LICENSE.md)。<br>

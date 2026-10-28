@@ -1,0 +1,54 @@
+name: Publish capability updates
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-marketplace
+  cancel-in-progress: false
+
+jobs:
+  notify-marketplace:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Notify the marketplace of an Agent update
+        env:
+          MARKETPLACE_TOKEN: ${{ secrets.AEGYCE_MARKETPLACE_TOKEN }}
+          SOURCE_REPOSITORY: ${{ github.repository }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import urllib.request
+
+          token = os.environ.get("MARKETPLACE_TOKEN", "")
+          if not token:
+              raise SystemExit("Configure the AEGYCE_MARKETPLACE_TOKEN Actions secret: a fine-grained token with Contents: write access to Aegyce/aegyce-marketplace.")
+          payload = {
+              "event_type": "agent-updated",
+              "client_payload": {
+                  "repository": os.environ["SOURCE_REPOSITORY"],
+                  "sha": os.environ["SOURCE_SHA"],
+              },
+          }
+          request = urllib.request.Request(
+              "https://api.github.com/repos/Aegyce/aegyce-marketplace/dispatches",
+              data=json.dumps(payload).encode(),
+              headers={
+                  "Authorization": "Bearer " + token,
+                  "Accept": "application/vnd.github+json",
+                  "X-GitHub-Api-Version": "2022-11-28",
+              },
+              method="POST",
+          )
+          with urllib.request.urlopen(request, timeout=30) as response:
+              assert response.status == 204, response.status
+          print("Marketplace notified; publication is verified by its Sync plugins workflow.")
+          PY
