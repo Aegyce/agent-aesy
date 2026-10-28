@@ -28,7 +28,7 @@ Aesy 中的部分组件可通过相应格式与接口供其他 AI 工具复用�
 可复用组件按可独立安装的能力包，通过 [Aegyce Marketplace](https://github.com/Aegyce/aegyce-marketplace) 分发，也可从本仓库直接获取。<br>
 <sub>Reusable components are distributed as independently installable capability packages through [Aegyce Marketplace](https://github.com/Aegyce/aegyce-marketplace) and are also available directly from this repository.</sub>
 
-- [aesy-computer-technical-language](plugins/computer-technical-language)：提供计算机技术用语 Skill，可单独安装。<br>
+- [Aesy:computer-technical-language](plugins/computer-technical-language)：提供计算机技术用语 Skill，可单独安装。<br>
   <sub>Provides the computer technical language skill as an independently installable plugin.</sub>
 
 ## 许可<br><sub>License</sub>
