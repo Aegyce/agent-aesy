@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aesy",
+  "version": "0.1.0",
+  "description": "Reusable skills for Aesy, Aegyce's general-purpose agent.",
+  "author": {
+    "name": "Aegyce",
+    "url": "https://github.com/Aegyce"
+  },
+  "repository": "https://github.com/Aegyce/agent-aesy",
+  "license": "CC-BY-NC-4.0",
+  "keywords": [
+    "aegyce",
+    "aesy",
+    "technical-writing",
+    "chinese"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Aesy",
+        "shortDescription": "Aegyce 通用 Agent 的能力包，当前提供计算机技术用语规范。",
+        "longDescription": "Aesy 承接 Requirement 在未匹配到领域 Agent 时委派的工作。当前能力包包含 computer-technical-language Skill，用于编写、润色和审查计算机技术表达。",
+        "developerName": "Aegyce",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/Aegyce/agent-aesy",
+        "defaultPrompt": [
+          "请使用 Aesy 的计算机技术用语规范检查这段说明，保留原有事实、条件和待定状态。"
+        ]
+      }
+    }
+  }
+}
