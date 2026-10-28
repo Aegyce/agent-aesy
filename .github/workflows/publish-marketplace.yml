@@ -1,4 +1,5 @@
 name: Publish capability updates
+run-name: ${{ github.event.repository.name }} updated
 
 on:
   push:
@@ -34,6 +35,7 @@ jobs:
           payload = {
               "event_type": "agent-updated",
               "client_payload": {
+                  "agent": os.environ["SOURCE_REPOSITORY"].split("/")[-1],
                   "repository": os.environ["SOURCE_REPOSITORY"],
                   "sha": os.environ["SOURCE_SHA"],
               },
