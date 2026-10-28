@@ -1,8 +1,8 @@
-# Aesy 能力包维护约定
+# Aesy Agent 维护约定
 
-本仓库维护 Aegyce 通用 Agent Aesy 的可复用能力，以根目录 `plugin.json` 作为插件入口。Aesy 承接 Requirement 在未匹配到领域 Agent 时委派的工作。
+本仓库维护 Aegyce 通用 Agent Aesy 这个完整 Agent。Aesy 承接 Requirement 在未匹配到领域 Agent 时委派的工作。根目录 `plugin.json` 是其中可复用组件的对外插件入口。
 
-- 一个 Agent 对应一个插件；多个 Skill 分别放在 `skills/<skill-name>/`，包内名称唯一。新增 MCP 集成时使用宿主支持的配置；工具代码须有明确调用入口，不因放入目录就视为已注册。
+- 以完整 Agent 为单位组织仓库，对外插件承载其中可复用的组件，可包含 Skill、MCP 集成、工具等，不预先限定可复用组件种类。多个 Skill 分别放在 `skills/<skill-name>/`，包内名称唯一；接入方式以宿主支持的格式和接口为准。
 - 技术表达遵循 `skills/computer-technical-language/SKILL.md`。修改 Skill 时保留原有事实、条件与范围；仅审查时不改动目标材料。
 - 发布内容须自包含，不依赖父项目、仓库外符号链接或本机绝对路径。目录移动或独立克隆后仍应可用；不得打包用户工作、记忆、运行状态、凭据或临时授权。
 - README 英文在上，中文用 `<br>` 与 `<sub>` 紧随对应段落；只列已确认且存在的能力和使用方法。
