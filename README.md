@@ -9,6 +9,8 @@ This repository maintains Aesy, Aegyce's general-purpose agent. When Requirement
 
 - [computer-technical-language](plugins/computer-technical-language/skills/computer-technical-language/SKILL.md)：用于编写、润色和审查计算机技术文档、代码注释与技术答复，统一术语，改进措辞，并保留已有事实、条件和不确定性。<br>
   Draft, revise, and review computing documentation, code comments, and technical responses, using consistent terminology and clear wording while preserving facts, conditions, and uncertainty.
+- [studio-portrait](plugins/studio-portrait/skills/studio-portrait/SKILL.md)：基于用户原始照片制作或修正高质感影棚商务肖像，保持五官特征与自然表情，统一高级西服、影棚布光与背景纵深。<br>
+  Create and refine high-end studio business portraits from original photos while preserving facial features and expressions, standardizing formal suits, studio lighting, and background depth.
 
 ### MCP 集成<br>MCP integrations
 
@@ -30,6 +32,8 @@ Reusable components are distributed as independently installable capability pack
 
 - [Aesy:computer-technical-language](plugins/computer-technical-language)：提供计算机技术用语 Skill，可单独安装。<br>
   Provides the computing terminology and technical writing skill as an independently installable plugin.
+- [Aesy:studio-portrait](plugins/studio-portrait)：提供高质感影棚肖像 Skill，可单独安装。<br>
+  Provides the high-end studio portrait skill as an independently installable plugin.
 
 ## 许可<br>License
 
