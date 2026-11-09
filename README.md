@@ -27,13 +27,8 @@ No standalone tools are currently provided.
 Aesy 的部分组件可供其他 AI 工具使用，可包括 Skill、MCP 集成、工具等。具体使用方式取决于该工具支持的格式和接口。<br>
 Other AI tools can use some of Aesy’s components, which may include skills, MCP integrations, tools, and other capabilities. How they are used depends on the formats and interfaces the tool supports.
 
-这些组件以可独立安装的能力包形式，通过 [Aegyce Marketplace](https://github.com/Aegyce/aegyce-marketplace) 分发，也可从本仓库直接获取。<br>
-Reusable components are distributed as independently installable capability packages through [Aegyce Marketplace](https://github.com/Aegyce/aegyce-marketplace) and are also available directly from this repository.
-
-- [Aesy:computer-technical-language](plugins/computer-technical-language)：提供计算机技术用语 Skill，可单独安装。<br>
-  Provides the computing terminology and technical writing skill as an independently installable plugin.
-- [Aesy:studio-portrait](plugins/studio-portrait)：提供高质感影棚肖像 Skill，可单独安装。<br>
-  Provides the high-end studio portrait skill as an independently installable plugin.
+这些组件以可独立安装的能力包形式存放在 [plugins/](plugins/)，通过 [Aegyce Marketplace](https://github.com/Aegyce/aegyce-marketplace) 分发，也可从本仓库直接获取。<br>
+Reusable components are stored as independently installable capability packages under [plugins/](plugins/), distributed through [Aegyce Marketplace](https://github.com/Aegyce/aegyce-marketplace), and also available directly from this repository.
 
 ## 许可<br>License
 
